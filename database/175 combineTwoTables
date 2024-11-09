@@ -1,0 +1,9 @@
+import pandas as pd
+
+def combine_two_tables(person: pd.DataFrame, address: pd.DataFrame) -> pd.DataFrame:
+    merged_df= pd.merge(person,address, on='personId', how='left')
+
+    merged_df=merged_df[['firstName','lastName','city','state']]
+
+    merged_df.to_string(index=False)
+    return merged_df
