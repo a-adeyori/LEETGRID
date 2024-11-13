@@ -6,4 +6,5 @@ def combine_two_tables(person: pd.DataFrame, address: pd.DataFrame) -> pd.DataFr
     merged_df=merged_df[['firstName','lastName','city','state']]
 
     merged_df.to_string(index=False)
+    #well
     return merged_df
