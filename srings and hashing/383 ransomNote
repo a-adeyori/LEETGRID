@@ -1,0 +1,18 @@
+class Solution(object):
+    def canConstruct(self, ransomNote, magazine):
+        
+        store_mag={}
+
+        for i in magazine:
+            if i not in store_mag:
+                store_mag[i]=1
+            else:
+                store_mag[i]+=1
+
+        for j in ransomNote:
+            if store_mag.get(j,0)==0:
+                return False
+            else:
+                store_mag[j]-=1
+
+        return True
