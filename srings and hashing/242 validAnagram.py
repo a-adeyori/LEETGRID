@@ -1,5 +1,14 @@
 import collections
-def isAnagram(s, t):
+from collections import Counter
+class Solution(object):
+    def isAnagram(self, s, t):
+        #using counter
+        count_s=Counter(s)
+        count_t=Counter(t)
+        return count_s==count_t
+
+
+        #using defaaultdict
         storeS=collections.defaultdict(int)
         storeT=collections.defaultdict(int)
 
@@ -16,4 +25,3 @@ def isAnagram(s, t):
             return True
         
         return False
-                

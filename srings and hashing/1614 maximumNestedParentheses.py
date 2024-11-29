@@ -11,7 +11,7 @@ class Solution(object):
                 count-=1
         return maximum
 
-        
+        #using a stack
         #stack=[]
         # store=[]
         # count=0
