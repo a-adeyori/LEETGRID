@@ -1,20 +1,37 @@
 from collections import defaultdict
+from collections import Counter
 class Solution(object):
     def canConstruct(self, ransomNote, magazine):
-        
-        # store_mag={}
-        store_mag=defaultdict(int)
-
-        for i in magazine:
-            # if i not in store_mag:
-            #     store_mag[i]=1
-            # else:
-            store_mag[i]+=1
-
-        for j in ransomNote:
-            if store_mag[j]==0: #store_mag.get(j,0)==0:
+        #using count and set logic
+        for i in set(ransomNote):
+            if ransomNote.count(i)>magazine.count(i):
                 return False
-            else:
-                store_mag[j]-=1
-
         return True
+
+        #using counter logic
+        # note_store=Counter(ransomNote)
+        # mag_store=Counter(magazine)
+
+        # for char,n in note_store.items():
+        #     if note_store[char]>mag_store[char]:
+        #         return False
+        # return True
+
+
+        #using dictionary logic
+        # store_mag={}
+        # store_mag=defaultdict(int)
+
+        # for i in magazine:
+        #     # if i not in store_mag:
+        #     #     store_mag[i]=1
+        #     # else:
+        #     store_mag[i]+=1
+
+        # for j in ransomNote:
+        #     if store_mag[j]==0: #store_mag.get(j,0)==0:
+        #         return False
+        #     else:
+        #         store_mag[j]-=1
+
+        # return True
