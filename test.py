@@ -1,1 +1,1 @@
-print([0][-1] if not [] else 0)
+print(ord('b')-ord('a')+1)

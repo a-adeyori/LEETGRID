@@ -7,12 +7,13 @@ class Solution(object):
         i=0
         while i<k:
             total=0
-
-            for j in val_str:
-                total+=int(j)
-            convert=str(total)
-            
-            val_str = convert
+            total=sum(int(j) for j in val_str)
+            val_str=str(total)
             i+=1
 
         return int(total)
+
+
+       
+
+        
