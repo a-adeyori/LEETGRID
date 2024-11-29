@@ -1,1 +1,1 @@
-print(30%60)
+print([0][-1] if not [] else 0)
