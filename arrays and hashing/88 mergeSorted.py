@@ -1,6 +1,13 @@
-#my own solution lol 10ms
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
+
+        #more optimal
+        nums1[m:]=nums2
+
+        nums1.sort()
+        
+        
+        #my bruteforce solution with 10ms lol
         nums2Pointer=0
         m==m
 
