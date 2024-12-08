@@ -1,5 +1,5 @@
 import re
-from collections import defaultdict
+from collections import defaultdict, Counter
 class Solution(object):
     def mostCommonWord(self, paragraph, banned):
         """
@@ -7,6 +7,13 @@ class Solution(object):
         :type banned: List[str]
         :rtype: str
         """
+        #short and learnt the fuction most_common in Counter
+        newWords = re.findall(r"[a-zA-Z]+", paragraph.lower())
+        
+        counter = Counter(word for word in newWords if word not in banned)
+
+        return counter.most_common(1)[0][0]
+
         #my brute force :/
         store=defaultdict(int)
         newWords = re.findall(r"[a-zA-Z]+", paragraph.lower())
