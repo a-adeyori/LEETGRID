@@ -22,3 +22,12 @@ class Solution(object):
             right-=1
 
         return " ".join(words)
+    
+#using one line
+class Solution(object):
+    def reverseWords(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        return " ".join(s.strip().split()[::-1])
