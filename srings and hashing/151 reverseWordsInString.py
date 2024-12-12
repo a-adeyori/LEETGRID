@@ -23,7 +23,7 @@ class Solution(object):
 
         return " ".join(words)
     
-#using one line
+#using one line 0ms
 class Solution(object):
     def reverseWords(self, s):
         """
