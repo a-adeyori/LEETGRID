@@ -4,6 +4,11 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
+        #shorter logic
+        reverseString = s[::-1]
+        listReverseString = reverseString.split()
+        reverseListReverseString = listReverseString[::-1]
+        return " ".join(reverseListReverseString)
 
         #brute force
         def reverse(word):
