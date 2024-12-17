@@ -4,7 +4,7 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        #shorter logic
+        #shorter logics
         reverseString = s[::-1]
         listReverseString = reverseString.split()
         reverseListReverseString = listReverseString[::-1]
